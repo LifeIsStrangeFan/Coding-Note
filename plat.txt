@@ -231,6 +231,6 @@ What is a Translator?
 														 	 ===========================
 														 	 				 ||
 														 	 				 \/
-		6. Program maintenance												 	  =========================
+		6. Program maintenance						  =========================
 														 	  || Program maintenance ||
 														 	  =========================						
