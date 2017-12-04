@@ -1,0 +1,236 @@
+Machine Language or First Generation Language
+	Advantages
+		High speed
+		Translation free
+	Disadvantages
+		Machine dependent
+		Difficult to write a code only in the form of 0s and 1s
+		Difficult to modify
+		Remembering the instruction in binary form is tedious
+		Difficult to detect errors if any
+		Knowledge of computer architecture is essential
+Assembly Languages or Second Generation Languages
+	Advantages
+		The computation time of an assembly language program is lesser than that of a high-level language
+		An assembly level language program runs faster to produce direct results
+		Compared to machine language format, it is easy to understand use
+	Disadvantages
+		Programming is difficult and time-consuming compared to high-level languages
+		Assembly languages are machine dependent
+		A program run in assembly language on one computer may not work on another.
+High-Level Languages, Compiler Langages or Third Generation Languages
+	a.k.a HLL,POL
+	Advantages
+		Machine independent
+		Easy to write programs
+		Easy to detect errors
+		Low development cost
+		Easy readability
+	Disadvantages
+		Poor control on hardware
+		Less efficient in terms of computation time
+		Requires more memory space
+Fourth Generation Languages
+	scripting,databases
+
+What is a Translator?
+	The set of programs that translate a high-level language into a low-level language is called a translator.
+		Source program -> Translator -> Object program
+	In computers, high-level language translators are classified into compilers, interpreters or assemblers.
+		What is a Compiler?
+			A compiler is a system software which converts the high-level language program into the low-level or binary language program needed to execute the program.
+		What is an Interpreter?
+			An interpreter is a language processor and is similar to the compiler in the sense that it translates the source program written in a high-level program.But an interpreter does not produce the machine language equivalent of the source program.It translates a high-level program into machine language, and executes it immediately, provided there are no mistakes.However, translation is done one line at a time.The process of translation and execution is carried out for each statement of the source program.
+
+				Table 1.1 A comparison between interpreters and compilers
+		||SN||==========Interpreter==========||==========Compiler==========||
+		||01||Translates the program line by ||Translates the entire program|
+		||01||line                           ||at a time                   ||
+		---------------------------------------------------------------------
+		||02||Requires less main memory      ||Requires more main memory   ||
+		---------------------------------------------------------------------
+		||03||Locating an error is instant   |Locating error is not constant|
+		---------------------------------------------------------------------
+		||04||Accurate in finding errors     ||Not very accurate in finding||
+		||04||                               ||errors                      ||
+		---------------------------------------------------------------------
+		||05||Very easy to debug             ||Difficult to debug when     ||
+		||05||                               ||compared to an interpreter  ||
+		---------------------------------------------------------------------
+		||06||Good for fast debugging and    |Slow for debugging and testing|
+		||06||testing stage                  ||                            ||
+		---------------------------------------------------------------------
+		||07||Translation and execution is   ||Translation and execution are|
+		||07||simultaneous                   |done at two diff(ab) instances|
+		---------------------------------------------------------------------
+		||08||Execution time is more, i.e.,  ||Execution time is less, i.e.,|
+		||08||it is slower                   ||it is faster                ||
+		---------------------------------------------------------------------
+		||09||Object file is not generated   ||Object file is generated    ||
+		---------------------------------------------------------------------
+		||10||BASIC and Java Script are      ||Turbo C and Turbo Pascal are||
+		||10||examples of interpreters       ||ples of compilers           ||
+		---------------------------------------------------------------------
+		
+		What is an Assembly?
+			A program which translates an assembly language program is called an assembler.Examples are TASM and MASM.
+	The Compilation Process
+		For many languages : pre-processing the source code, checking the syntax of the source code, converting the source code to assembly, converting the code to machine code, and linking multiple pieces of machine code from seperate files into a single executable file.
+			Stages from source to executable code
+				
+				Fig. 1.3 Steps in the production of an executable code
+			============================================================
+			======================================= Source program =====
+			========================================      ||       =====
+			========= Pre-processing ===============      ||       =====
+			========================================      \/       =====
+			======================================= Source program =====
+			========================================      ||       =====
+			============== Compiling ===============      ||       =====
+			========================================      \/       =====
+			===================================== Assembly program =====
+			========================================      ||       =====
+			============== Assembling ==============      ||       =====
+			========================================      \/       =====
+			================================= Machine instructions =====
+			========================================      ||       =====
+			============== Linking =================      ||       =====
+			========================================      \/       =====
+			====================================== Executable code =====
+
+			What is a Linker?
+				A linker is a program that comes under the category of system software.Linker links the code of the source program, the associated header files, library programs etc., and output an enhanced source program which can then be executed.It is mostly used as a component of the computer.
+
+									Fig. 1.4 Process of linking
+				====================
+				== Header file(s) == +
+				====================  \
+											  \
+====================					  _\|
+== Source program == +------------> ============
+====================						== Linker == +-----> =====================
+											   ============			== Enhanced source ==
+											    /|						== program         ==
+				======================  /							=====================
+				== Library file(s)  == +
+				== and / or modules ==
+				======================
+
+			What is a Loader?
+				A loader also forms part of the system software. It is a program which brings the executable code of the program to be executed into the main memory and prepares for its execution.
+	Programming languages are usually categorised under the following heads.
+		1. Function/procedure oriented languages
+		2. Object oriented languages
+		3. Event based languages
+		4. Scripting languages
+
+	Function Oriented Programming Languages
+		In computer programming, we may devide a problem into sub-problems to carry out individual tasks and later group them into a single unit. A.K.A "modular programming".
+			Features of modular programming
+				1. It facilitates top-down programming. In this programming style, the high-level logic of the overall problem is solved first, while the details of each low-level function is addressed later.
+				2. The length of a source program can be reduced by using functions at appropriate places.
+				3. It is easy to locate and isolate faults in functions for further investigation.
+				4. A function written by the user may be clubbed into existing predefined functions or one can create a user defined header file and store all or similar types of user defined functions in it. Thus functions written by a user may be used in other programs.
+	Object Oriented Programming Languages
+		A.K.A. "OOP". An object is a pre-defined set of program code that once written and tested will always behave in the same way. Objects can be modified, reused, copied or created. Using OOP, object are combined with necessary code for completing program tasks.Examples of object oriented languages include C++, VC++, Java.
+	Event Based Programming Languages
+		An action recognised by a form or control is called an event. An event usually occurs when the user, OS or application interacts with the object or program. Such as 'Press key' or 'Click'.In an event driven model, programs do not follow sequential logic.For example, in VB, each event begins with the terms `Private Sub` and ends with `End Sub` as given below.
+			<VB>
+				Private Sub EVENT_NAME ()
+				End Sub
+			</VB>
+	Scripting Languages
+		Programs in scripting languages are interpreted one command at a time.They can be used to create specialised GUIs and forms that enhance the convenience of search engines, web-based e-mail and e-commerce.
+			List below are some scripting languages:
+				1. HTML
+				2. Hyper Talk
+				3. PERL
+				4. AppleScript
+				5. Python
+				6. VBScript
+				7. Javascript etc
+
+	Characteristics of a Good Programming Language
+		1. Ease of use
+		2. Portability
+		3. Reliability
+		4. Maintainability
+		5. Reusability
+		6. Security
+		7. Naturalness for the given application
+		8. Provision of a compact code
+		9. Cost of producing and maintaining a code etc.
+		Though there are no specific rules regarding what a programming language should consist of, one can find the following important features in most programming languages.
+			1. Declaration of variables
+			2. Scope of variables
+			3. Data structures
+			4. Flow of control statement like conditional statements, iterative statements etc.
+			5. Modules (procedures/functions/sub-routines) that perform a certain task and return some valuable result to the main module.
+			6. Array concept for handling large volumes of similar type of data, etc.
+
+		==============================
+		||Chapter 1 Review Questions||
+		==============================
+			1. What is meant by generation of languages?
+					Answer: The enhancement in various computer languages.
+			2. Write a short note on
+				a. Machine language
+				b. Assembly language
+				c. High-level language
+				d. Fourth generation language
+					Answer: (a). a.k.a. 1GL refer to machine language
+							  (b). a.k.a. 2GL consist of assembly languages
+							  (c). a.k.a. 3GL such as C
+							  (D). a.k.a. 4GL database programming/scripts etc
+			3. What are translators? Explain the need for translators.
+					Answer: The set of programs that translate a high-level language into a low-level language is called a translator.
+			4. Write a short note on
+				a. Compilers
+				b. Interpreters
+				c. Assemblers
+			5. Explain the compilation process.
+			6. Write a short note on
+				a. Linkers
+				b. Loaders
+			7. Explain the various types of programming languages.
+			8. Write a short note on
+				a. Function oriented languages
+				b. Object oriented languages
+				c. Event based languages
+				d. Scripting languages
+			9. Compare some HLL
+			10. Write the characteristics of a good programming language.
+
+		============================================
+		||CHAPTER 2 Programming Construction Tools||
+		============================================
+	
+		Fig. 2.1 Problem analysis and program development process.
+		1. Problem analysis  			   			======================
+																|| Problem Analysis ||
+																======================
+																			 ||
+																			 \/
+		2. Program design									 ====================
+																 || Program design ||
+																 ====================
+																 			 ||
+																 			 \/
+		3. Program coding									 ====================
+																 || Program coding ||
+																 ====================
+																 			 ||
+																 			 \/
+		4. Program debugging								=======================
+																|| Program debugging ||
+																=======================
+																			 ||
+																			 \/
+		5. Problem/program documentation			 ===========================
+														 	 || Problem documentation ||
+														 	 ===========================
+														 	 				 ||
+														 	 				 \/
+		6. Program maintenance												 	  =========================
+														 	  || Program maintenance ||
+														 	  =========================						
